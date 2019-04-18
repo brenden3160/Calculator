@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Square extends NormalPolygon {
 
-
   public double getDiagonalAcross() {
     return Math.abs(Math.sqrt(2 * Math.pow(sideLength, 2)));
   }
@@ -23,9 +22,7 @@ public class Square extends NormalPolygon {
         System.out.println("Please enter a side length of the square below:");
         mySquare.setSideLength(scanner.nextDouble());
         goodInput = true;
-      }
-
-      catch (Exception ex) {
+      } catch (Exception ex) {
         System.out.println("Invalid input. Please try again.");
         scanner.nextLine();
       }
