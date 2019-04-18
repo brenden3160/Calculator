@@ -11,6 +11,11 @@ public class Cube extends NormalPolygon {
     return Math.abs(Math.pow(sideLength, 2) * 6);
   }
 
+  /**
+   * User interface for dimension finding.
+   * 
+   * @param scanner Scans to get user's numbers.
+   */
   public static void measureCube(Scanner scanner) {
     Cube myCube = new Cube();
     boolean goodInput = false;
@@ -19,9 +24,7 @@ public class Cube extends NormalPolygon {
         System.out.println("Please enter a side length of the square below:");
         myCube.setSideLength(scanner.nextDouble());
         goodInput = true;
-      }
-
-      catch (Exception ex) {
+      } catch (Exception ex) {
         System.out.println("Invalid input. Please try again.");
         scanner.nextLine();
       }
