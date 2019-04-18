@@ -14,6 +14,11 @@ public class Square extends NormalPolygon {
     return Math.abs(4 * sideLength);
   }
 
+  /**
+   * User interface for dimension finding.
+   * 
+   * @param scanner Scans to get user's numbers.
+   */
   public static void measureSquare(Scanner scanner) {
     Square mySquare = new Square();
     boolean goodInput = false;
