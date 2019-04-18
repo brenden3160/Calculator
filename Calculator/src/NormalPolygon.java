@@ -5,6 +5,6 @@ public class NormalPolygon {
 
   // Mutator methods
   public void setSideLength(double sideLength) {
-      this.sideLength = sideLength;
+    this.sideLength = sideLength;
   }
 }
