@@ -17,12 +17,22 @@ public class LoanAmortization {
     this.interestRate = interestRate;
   }
 
+  /**
+   * Calculates interest.
+   * 
+   * @return returns net carry value.
+   */
   public double getInterestForMonth() {
     double paidInInterest = carryValue * ((interestRate / 100) / 12);
     double remainingCarry = carryValue - paidInInterest;
     return carryValue - remainingCarry;
   }
 
+  /**
+   * Calculates paid off for period.
+   * 
+   * @return Returns a new carry value.
+   */
   public double getPaidOffInPeriod() {
     double paidInInterest = carryValue * ((interestRate / 100) / 12);
     return carryValue - (monthlyPayment - paidInInterest);
@@ -34,6 +44,11 @@ public class LoanAmortization {
     return carryValue - paidInInterest;
   }
 
+  /**
+   * Beginning of UI for amortization prompts.
+   * 
+   * @param scanner Scanner asks for the info.
+   */
   public static void findLoanAmortization(Scanner scanner) {
     LoanAmortization myLoanAmortization = new LoanAmortization();
     boolean goodInput = false;
@@ -42,9 +57,7 @@ public class LoanAmortization {
         System.out.println("Please enter the the amount owed.");
         myLoanAmortization.setCarryValue(scanner.nextDouble());
         goodInput = true;
-      }
-
-      catch (Exception ex) {
+      } catch (Exception ex) {
         System.out.println("Invalid input. Please try again.");
         scanner.nextLine();
       }
@@ -55,9 +68,7 @@ public class LoanAmortization {
         System.out.println("Please enter your monthly payment.");
         myLoanAmortization.setMonthlyPayment(scanner.nextDouble());
         goodInput2 = true;
-      }
-
-      catch (Exception ex) {
+      } catch (Exception ex) {
         System.out.println("Invalid input. Please try again.");
         scanner.nextLine();
       }
@@ -68,9 +79,7 @@ public class LoanAmortization {
         System.out.println("Please enter the annual interest rate.");
         myLoanAmortization.setInterestRate(scanner.nextDouble());
         goodInput3 = true;
-      }
-
-      catch (Exception ex) {
+      } catch (Exception ex) {
         System.out.println("Invalid input. Please try again.");
         scanner.nextLine();
       }
