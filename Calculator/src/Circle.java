@@ -10,6 +10,11 @@ public class Circle extends RoundShape {
     return Math.abs(radius * 2 * Math.PI);
   }
 
+  /**
+   * This is scanner loop for circle that finds dimensions.
+   * 
+   * @param scanner This is the actual scanner.
+   */
   public static void measureCircle(Scanner scanner) {
     Circle myCircle = new Circle(); // instance of a class 'circle'
     boolean goodInput = false;

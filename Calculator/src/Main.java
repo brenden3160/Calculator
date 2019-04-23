@@ -1,6 +1,6 @@
-import java.util.Scanner;
 import java.util.InputMismatchException;
 // import allows me to use more functions from libraries that I am including
+import java.util.Scanner;
 
 // Brenden Rathgeber
 
@@ -8,17 +8,10 @@ import java.util.InputMismatchException;
 
 // Integration Project
 public class Main {
-	// Class = code
+  // Class = code
 
-	public static void main(String[] args) { // this is a header. public is an access modifier.
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Hello! I calculate commonly used formulas for you. Press enter to get started.");
-		scanner.nextLine();
-		boolean continueProgram = true;
-		while (continueProgram == true) {
-			System.out.println("\nPlease enter the number coresponding to the field that you want to use:"); // my
-			// greeting
 
+<<<<<<< HEAD
 			System.out.println((int) 2.0 / 2 + ": Circle");
 			System.out.println("2: Ellipse");
 			System.out.println("3: Sphere");
@@ -42,35 +35,73 @@ public class Main {
 				}
 			}
 			switch (choice) {
+=======
+  /*
+   * This is the main and switch statement that takes you to different functions
+   * 
+   * @param args Switch is first thing by main.
+   */
+>>>>>>> branch 'master' of https://github.com/brenden3160/Calculator.git
 
-			case 1:
-				Circle.measureCircle(scanner);
-				break;
+  /**
+   * Java main class leads to welcome menu and switch.
+   * 
+   * @param args This is for the scanner.
+   */
+  public static void main(String[] args) { // this is a header. public is an access modifier.
+    Scanner scanner = new Scanner(System.in);
+    System.out.println(
+        "Hello! I calculate commonly used formulas for you. Press " + "enter to get started.");
+    scanner.nextLine();
+    boolean continueProgram = true;
+    while (continueProgram == true) {
+      System.out.println(
+          "\nPlease enter the number coresponding to the field " + "that you want to use:");
 
-			case 2:
-				Ellipse.ellipseCalculator(scanner);
-				break;
+      System.out.println((int) 2.0 / 2 + ": Circle");
+      System.out.println("2: Ellipse");
+      System.out.println("3: Sphere");
+      System.out.println("4: Square");
+      System.out.println("5: Cube");
+      System.out.println("6: Your Body Mass Index (BMI)");
+      System.out.println("7: Amortization Amount on a Bond");
+      System.out.println("8: Factors List");
+      System.out.println("9: Creator Credits");
+      System.out.println("10: Terminate Program");
+      int choice = 0;
+      boolean runInput = true;
+      while (runInput == true) {
+        try {
+          choice = scanner.nextInt();
+          break;
+        } catch (InputMismatchException ex) {
+          System.out.println("Invalid input. Please try one of the menu options. ");
+          scanner.nextLine();
+        }
+      }
+      switch (choice) {
 
-			case 3:
-				Sphere.measureSphere(scanner);
-				break;
+        case 1:
+          Circle.measureCircle(scanner);
+          break;
 
-			case 4:
-				Square.measureSquare(scanner);
-				break;
+        case 2:
+          Ellipse.ellipseCalculator(scanner);
+          break;
 
-			case 5:
-				Cube.measureCube(scanner);
-				break;
+        case 3:
+          Sphere.measureSphere(scanner);
+          break;
 
-			case 6:
-				BMI.findBmi(scanner);
-				break;
+        case 4:
+          Square.measureSquare(scanner);
+          break;
 
-			case 7:
-				LoanAmortization.findLoanAmortization(scanner);
-				break;
+        case 5:
+          Cube.measureCube(scanner);
+          break;
 
+<<<<<<< HEAD
 			case 8:
 				Factor.findFactors(scanner);
 				break;
@@ -78,7 +109,17 @@ public class Main {
 			case 9:
 				NameFinder.GiveNames(scanner);
 				break;
+=======
+        case 6:
+          BodyMassIndex.findBodyMassIndex(scanner);
+          break;
 
+        case 7:
+          LoanAmortization.findLoanAmortization(scanner);
+          break;
+>>>>>>> branch 'master' of https://github.com/brenden3160/Calculator.git
+
+<<<<<<< HEAD
 			case 10:
 				System.out.println("Made by Brenden Rathgeber in COP 2006 in 2019.");
 				break;
@@ -98,13 +139,33 @@ public class Main {
 						System.out.println("Invalid input.");
 						scanner.nextLine();
 					}
+=======
+        case 8:
+          Factor.findFactors(scanner);
+          break;
+>>>>>>> branch 'master' of https://github.com/brenden3160/Calculator.git
 
-				}
-				break;
+        case 9:
+          System.out.println("Made by Brenden Rathgeber in COP 2006 in 2019.");
+          break;
 
-			default:
-				System.out.println("Invalid Input. Please try again.\n");
+        case 10:
+          System.out.println("Are you sure you would like to terminate program? (Y/N)");
+          boolean goodInput = false;
+          while (goodInput == false) {
+            String terminateInput = scanner.nextLine();
+            try {
+              if (terminateInput.equalsIgnoreCase("N")) {
+                goodInput = true;
+              } else if (terminateInput.equalsIgnoreCase("Y")) {
+                System.exit(0);
+              }
+            } catch (Exception e) {
+              System.out.println("Invalid input.");
+              scanner.nextLine();
+            }
 
+<<<<<<< HEAD
 			}
 		}
 	}
@@ -124,6 +185,17 @@ public class Main {
 				scanner.nextLine();
 			}	
 	}
+=======
+          }
+          break;
+
+        default:
+          System.out.println("Invalid Input. Please try again.\n");
+
+      }
+    }
+  }
+>>>>>>> branch 'master' of https://github.com/brenden3160/Calculator.git
 }
 }
 
@@ -132,32 +204,28 @@ public class Main {
 // argument is whart you put in a call kinda like how you put a parameter in a header
 
 /*
- * while 14, switch 29, if 141, else if 143, else 145, break 33, math class in
- * Circle.java, return in every class made,
+ * while 14, switch 29, if 141, else if 143, else 145, break 33, math class in Circle.java, return
+ * in every class made,
  * 
- * scope: everything in this 'void main only applies to itself. another 'void'
- * will need to have its saved values redeclared. Variables declared out of the
- * 'void are called 'global' and are not recommended for use. Variables are
- * spaces in memory for values. All primitive data types have their own class
- * datatypes: int, long, short, float,
+ * scope: everything in this 'void main only applies to itself. another 'void' will need to have its
+ * saved values redeclared. Variables declared out of the 'void are called 'global' and are not
+ * recommended for use. Variables are spaces in memory for values. All primitive data types have
+ * their own class datatypes: int, long, short, float,
  */
 // inheritance is useful for not having to use extra ram and typing time on classes with
 // similarities. ex. circle and sphere both have a radius
 /*
- * In Java, we have eight primitive data types: boolean: true and false char:
- * one character byte: whole numbers ranging from -128 and 127. short: whole
- * numbers ranging from -32,768 to 32767 int: whole numbers ranging from
- * -2,147,483,648 to 2,147,483,647 long: whole numbers ranging from
- * -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. float: value that
- * holds 6 to 7 decimal digits double: all numbers with decimal points up to 15
- * digits
+ * In Java, we have eight primitive data types: boolean: true and false char: one character byte:
+ * whole numbers ranging from -128 and 127. short: whole numbers ranging from -32,768 to 32767 int:
+ * whole numbers ranging from -2,147,483,648 to 2,147,483,647 long: whole numbers ranging from
+ * -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. float: value that holds 6 to 7 decimal
+ * digits double: all numbers with decimal points up to 15 digits
  */
 
 /*
- * scope: everything in this 'void main only applies to itself. another 'void'
- * will need to have its saved values redeclared. Variables declared out of the
- * 'void are called 'global' and are not recommended for use. Variables are
- * spaces in memory for values.
+ * scope: everything in this 'void main only applies to itself. another 'void' will need to have its
+ * saved values redeclared. Variables declared out of the 'void are called 'global' and are not
+ * recommended for use. Variables are spaces in memory for values.
  */
 
 // casting is changing the datatype from one type to another. i use it on line 22

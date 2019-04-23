@@ -12,6 +12,11 @@ public class Sphere extends RoundShape {
 
   }
 
+  /**
+   * User interface for dimension finding.
+   * 
+   * @param scanner Scans to get user's numbers.
+   */
   public static void measureSphere(Scanner scanner) {
     Sphere mySphere = new Sphere();
     boolean goodInput = false;
@@ -20,9 +25,7 @@ public class Sphere extends RoundShape {
         System.out.println("Please enter the radius of the sphere below:");
         mySphere.setRadius(scanner.nextDouble());
         goodInput = true;
-      }
-
-      catch (Exception ex) {
+      } catch (Exception ex) {
         System.out.println("Invalid input. Please try again.");
         scanner.nextLine();
       }
