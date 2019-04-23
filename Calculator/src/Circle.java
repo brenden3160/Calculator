@@ -28,5 +28,6 @@ public class Circle extends RoundShape {
     System.out.println("Circle Dimensions:");
     System.out.println("Area: " + myCircle.getArea() + " units squared.");// receiving output
     System.out.println("Circumference: " + myCircle.getCircumference() + " units.");
+    Main.continueProgram(scanner);
   }
 }

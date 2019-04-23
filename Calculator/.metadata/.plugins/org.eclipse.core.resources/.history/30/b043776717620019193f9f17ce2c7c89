@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Square extends NormalPolygon {
+
+  public double getDiagonalAcross() {
+    return Math.abs(Math.sqrt(2 * Math.pow(sideLength, 2)));
+  }
+
+  public double getArea() {
+    return Math.abs(Math.pow(sideLength, 2));
+  }
+
+  public double getPerimeter() {
+    return Math.abs(4 * sideLength);
+  }
+
+  public static void measureSquare(Scanner scanner) {
+    Square mySquare = new Square();
+    boolean goodInput = false;
+    while (goodInput == false) {
+      try {
+        System.out.println("Please enter a side length of the square below:");
+        mySquare.setSideLength(scanner.nextDouble());
+        goodInput = true;
+      }
+
+      catch (Exception ex) {
+        System.out.println("Invalid input. Please try again.");
+        scanner.nextLine();
+      }
+    }
+    System.out.println("\nSquare Dimensions");
+    System.out.println("Area: " + mySquare.getArea() + " units squared.");
+    System.out.println("Perimeter: " + mySquare.getPerimeter() + " units.");
+    System.out.println("Diagonal Distance Across: " + mySquare.getDiagonalAcross() + " units.");
+  }
+}

@@ -29,5 +29,6 @@ public class Cube extends NormalPolygon {
     System.out.println("\nCube Dimensions");
     System.out.println("Perimeter: " + myCube.getVolume() + " units cubed.");
     System.out.println("Diagonal Distance Across: " + myCube.getSurfaceArea() + " units squared.");
+    Main.continueProgram(scanner);
   }
 }

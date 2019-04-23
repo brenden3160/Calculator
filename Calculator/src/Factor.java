@@ -102,5 +102,6 @@ public class Factor {
         + myFactor.getFactorFour() + myFactor.getFactorFive() + " " + myFactor.getFactorSix() + " "
         + myFactor.getFactorSeven() + " " + myFactor.getFactorEight() + " "
         + myFactor.getFactorNine());
+    Main.continueProgram(scanner);
   }
 }

@@ -57,6 +57,7 @@ public class Ellipse extends RoundShape {
 	    System.out.println("Ellipse Dimensions:");
 	    System.out.println("Area: " + myEllipse.getArea() + " units squared.");// receiving output
 	    System.out.println("Circumference: " + myEllipse.getCircumference() + " units.");
+	    Main.continueProgram(scanner);
 	  }
 }
 

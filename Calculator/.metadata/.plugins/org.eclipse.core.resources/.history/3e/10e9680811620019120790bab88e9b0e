@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Circle extends RoundShape {
+
+  public double getArea() {
+    return Math.abs(Math.pow(radius, 2) * Math.PI);
+  }
+
+  public double getCircumference() {
+    return Math.abs(radius * 2 * Math.PI);
+  }
+
+  public static void measureCircle(Scanner scanner) {
+    Circle myCircle = new Circle(); // instance of a class 'circle'
+    boolean goodInput = false;
+    while (goodInput == false) {
+      try {
+        System.out.println("Please enter the radius of the circle below:");
+        myCircle.setRadius(scanner.nextDouble());// sends radius into myCircle equations
+        goodInput = true;
+
+      } catch (Exception ex) {
+        System.out.println("Invalid input. Please try again.");
+        scanner.nextLine();
+      }
+    }
+
+    System.out.println("Circle Dimensions:");
+    System.out.println("Area: " + myCircle.getArea() + " units squared.");// receiving output
+    System.out.println("Circumference: " + myCircle.getCircumference() + " units.");
+  }
+}

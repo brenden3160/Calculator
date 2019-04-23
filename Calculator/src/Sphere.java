@@ -30,5 +30,6 @@ public class Sphere extends RoundShape {
     System.out.println("\nSphere Dimensions:");
     System.out.println("Volume: " + mySphere.getVolume() + " units cubed.");
     System.out.println("Surface Area: " + mySphere.getSurfaceArea() + " units squared.");
+    Main.continueProgram(scanner);
   }
 }

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.0-beta1" sequence="2" timestamp="1555624452934" analysisTimestamp="1555624452489" release="">
+  <Project projectName="Calculator">
+    <Jar>C:\Users\rbrathgeber1940\OneDrive - Florida Gulf Coast University\Eclipse Workspace\Calculator\bin</Jar>
+    <AuxClasspathEntry>C:\Users\rbrathgeber1940\OneDrive - Florida Gulf Coast University\Eclipse Workspace\Calculator\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_202\lib\rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_202\lib\jce.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\rbrathgeber1940\OneDrive - Florida Gulf Coast University\Eclipse Workspace\Calculator\src</SrcDir>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="Main">
+      <SourceLine classname="Main" sourcefile="Main.java" sourcepath="Main.java"/>
+    </Class>
+    <Method classname="Main" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="Main" start="26" end="118" startBytecode="0" endBytecode="812" sourcefile="Main.java" sourcepath="Main.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner"/>
+    </Method>
+    <SourceLine classname="Main" start="26" end="26" startBytecode="7" endBytecode="7" sourcefile="Main.java" sourcepath="Main.java"/>
+    <SourceLine classname="Main" start="26" end="26" startBytecode="7" endBytecode="7" sourcefile="Main.java" sourcepath="Main.java"/>
+  </BugInstance>
+  <BugInstance type="IL_INFINITE_LOOP" priority="1" rank="8" abbrev="IL" category="CORRECTNESS" first="1">
+    <Class classname="Main">
+      <SourceLine classname="Main" sourcefile="Main.java" sourcepath="Main.java"/>
+    </Class>
+    <Method classname="Main" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="Main" start="26" end="118" startBytecode="0" endBytecode="812" sourcefile="Main.java" sourcepath="Main.java"/>
+    </Method>
+    <SourceLine classname="Main" start="31" end="31" startBytecode="360" endBytecode="360" sourcefile="Main.java" sourcepath="Main.java"/>
+    <LocalVariable name="continueProgram" register="2" pc="360" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="Main" start="30" end="30" startBytecode="25" endBytecode="25" sourcefile="Main.java" sourcepath="Main.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 18 Apr 2019 17:53:01 -0400" total_classes="11" referenced_classes="27" total_bugs="2" total_size="362" num_packages="1" java_version="1.8.0_202" vm_version="25.202-b08" cpu_seconds="2.25" clock_seconds="0.45" peak_mbytes="423.87" alloc_mbytes="1024.00" gc_seconds="0.02" priority_1="2">
+    <PackageStats package="" total_bugs="2" total_types="11" total_size="362" priority_1="2">
+      <ClassStats class="BodyMassIndex" sourceFile="BodyMassIndex.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="Circle" sourceFile="Circle.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="Cube" sourceFile="Cube.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="Ellipse" sourceFile="Ellipse.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="Factor" sourceFile="Factor.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="LoanAmortization" sourceFile="LoanAmortization.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="Main" sourceFile="Main.java" interface="false" size="63" bugs="2" priority_1="2"/>
+      <ClassStats class="NormalPolygon" sourceFile="NormalPolygon.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="RoundShape" sourceFile="RoundShape.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="Sphere" sourceFile="Sphere.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="Square" sourceFile="Square.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="78" invocations="369" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="13106" standardDeviationMicrosecondsPerInvocation="753"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="50" invocations="2" avgMicrosecondsPerInvocation="25148" maxMicrosecondsPerInvocation="42015" standardDeviationMicrosecondsPerInvocation="16867"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="26" invocations="371" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="232" standardDeviationMicrosecondsPerInvocation="30"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="24" invocations="53" avgMicrosecondsPerInvocation="469" maxMicrosecondsPerInvocation="9703" standardDeviationMicrosecondsPerInvocation="1383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="20" invocations="53" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="3109" standardDeviationMicrosecondsPerInvocation="735"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="13" invocations="27" avgMicrosecondsPerInvocation="505" maxMicrosecondsPerInvocation="3953" standardDeviationMicrosecondsPerInvocation="918"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="13" invocations="53" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="1792" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="13" invocations="67" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="614" standardDeviationMicrosecondsPerInvocation="84"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="12" invocations="53" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="1496" standardDeviationMicrosecondsPerInvocation="416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="11" invocations="131" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="450" standardDeviationMicrosecondsPerInvocation="86"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1555624444512" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1555624444514" release="" codeSize="362" numClasses="11"/>
+  </History>
+</BugCollection>

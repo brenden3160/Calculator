@@ -55,6 +55,6 @@ public class BMI {
     } else {
       System.out.println("According to your BMI, you are most likely overweight.");
     }
-
+    Main.continueProgram(scanner);
   }
 }

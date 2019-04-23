@@ -34,5 +34,6 @@ public class Square extends NormalPolygon {
     System.out.println("Area: " + mySquare.getArea() + " units squared.");
     System.out.println("Perimeter: " + mySquare.getPerimeter() + " units.");
     System.out.println("Diagonal Distance Across: " + mySquare.getDiagonalAcross() + " units.");
+    Main.continueProgram(scanner);
   }
 }

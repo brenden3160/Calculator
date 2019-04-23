@@ -27,8 +27,9 @@ public class Main {
 			System.out.println("6: Your Body Mass Index (BMI)");
 			System.out.println("7: Amortization Amount on a Bond");
 			System.out.println("8: Factors List");
-			System.out.println("9: Creator Credits");
-			System.out.println("10: Terminate Program");
+			System.out.println("9: Find your street name");
+			System.out.println("10: Creator Credits");
+			System.out.println("11: Terminate Program");
 			int choice = 0;
 			boolean runInput = true;
 			while (runInput == true) {
@@ -73,12 +74,16 @@ public class Main {
 			case 8:
 				Factor.findFactors(scanner);
 				break;
-
+				
 			case 9:
-				System.out.println("Made by Brenden Rathgeber in COP 2006 in 2019.");
+				NameFinder.GiveNames(scanner);
 				break;
 
 			case 10:
+				System.out.println("Made by Brenden Rathgeber in COP 2006 in 2019.");
+				break;
+
+			case 11:
 				System.out.println("Are you sure you would like to terminate program? (Y/N)");
 				boolean goodInput = false;
 				while (goodInput == false) {
@@ -103,7 +108,25 @@ public class Main {
 			}
 		}
 	}
+	public static void continueProgram(Scanner scanner) {
+		System.out.println("Are you sure you would like to continue program? (Y/N)");
+		boolean goodInput = false;
+		while (goodInput == false) {
+			String terminateInput = scanner.nextLine();
+			try {
+				if (terminateInput.equalsIgnoreCase("Y")) {
+					goodInput = true;
+				} else if (terminateInput.equalsIgnoreCase("N")) {
+					System.exit(0);
+				}
+			} catch (Exception e) {
+				System.out.println("Invalid input.");
+				scanner.nextLine();
+			}	
+	}
 }
+}
+
 
 // method is a group of statements grouped together to complete a task
 // argument is whart you put in a call kinda like how you put a parameter in a header
