@@ -32,3 +32,5 @@ integration
 // i use escape sequence on 19 (a shortcut for new line and tab and other stuff like that
 
 // hi :)
+the break statement allows you to leave a loop or switch
+operator precedence is like PEMDAS but with extra steps for java. 
