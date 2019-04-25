@@ -3,6 +3,11 @@ integration
 // method is a group of statements grouped together to complete a task
 // argument is whart you put in a call kinda like how you put a parameter in a header
 
+Array stuff will be all in the NameFinder section.Feel free to make your street name :)
+I don' have an array math section. I really should do that and I'll get onto it.
+I also don't have a continue statement however I have many break statements and can explain a continue later in this read me. 
+A continue statement causes the loop to go to it's next phase. 
+
 /*
  * while 14, switch 29, if 141, else if 143, else 145, break 33, math class in Circle.java, return
  * in every class made,
