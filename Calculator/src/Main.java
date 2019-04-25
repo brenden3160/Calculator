@@ -3,10 +3,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 // Brenden Rathgeber
-
 // Integration Project Calculator
-
-// Integration Project
  /**
    * Java main class leads to welcome menu and switch.
    * 
@@ -16,21 +13,19 @@ public class Main {
   // Class = code
   public static void main(String[] args) { // this is a header. public is an access modifier.
     Scanner scanner = new Scanner(System.in);
-    System.out.println(
-        "Hello! I calculate commonly used formulas for you. Press " + "enter to get started.");
+    System.out.println("Hello! I calculate commonly used formulas for you. Press "
+		       + "enter to get started.");
     scanner.nextLine();
     boolean continueProgram = true;
     while (continueProgram == true) {
-      System.out.println(
-          "\nPlease enter the number coresponding to the field " + "that you want to use:");
+      System.out.println("\nPlease enter the number coresponding to the field "
+			 + "that you want to use:");
 	     /*
    * This is the main and switch statement that takes you to different functions
    * 
    * @param args Switch is first thing by main.
    */
-
 switch (choice) {
-		 
 			System.out.println((int) 2.0 / 2 + ": Circle");
 			System.out.println("2: Ellipse");
 			System.out.println("3: Sphere");
@@ -137,8 +132,6 @@ switch (choice) {
       }
     }
   }
-}
-}
 
 
 // method is a group of statements grouped together to complete a task
